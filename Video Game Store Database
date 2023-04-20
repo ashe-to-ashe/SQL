@@ -1,0 +1,38 @@
+--Create stock of video games for store
+
+/** Game inventory
+Super Mario Odyssey (6, 50, 2017)
+Pokemon Violet (2, 60, 2022)
+Pokemon Scarlet (2, 60, 2022)
+Dragon Ball Z Budokai Tenkaichi 4 (8, 70, 2023)
+Dead Space (6, 60, 2023)
+Dying Light 2 (5, 45, 2021)
+Super Smash Bros Ultimate (4, 35, 2018)
+**/
+
+--Create video game store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, release_date INTEGER);
+
+INSERT INTO store VALUES (1, "Super Mario Odyssey", 6, 50, 2017);
+INSERT INTO store VALUES (2, "Pokemon Violet", 2, 60, 2022);
+INSERT INTO store VALUES (3, "Pokemon Scarlet", 2, 60, 2022);
+INSERT INTO store VALUES (4, "Dragon Ball Z Budokai Tenkaichi 4", 8, 70, 2023);
+INSERT INTO store VALUES (5, "Dead Space", 6, 60, 2023);
+INSERT INTO store VALUES (6, "Dying Light 2", 5, 45, 2021);
+INSERT INTO store VALUES (7, "Super Smash Bros Ultimate", 4, 35, 2018);
+
+--display the database
+SELECT * FROM store;
+
+--order the results in order of name
+SELECT NAME from store;
+
+--order database by price
+SELECT PRICE from store;
+
+--order all results in database by their release dates
+SELECT * FROM store GROUP BY release_date;
+
+--group database by product name, add all prices together for full price
+SELECT price, SUM(quantity) FROM store GROUP BY name;
