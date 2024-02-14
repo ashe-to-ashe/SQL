@@ -30,7 +30,7 @@
 
 ---
 
-**Query #1**
+**Query #1** This query selected the prices of each item in stock in the superstore, ordered them by most expensive to least expensive, and included each item's category
 
     SELECT price, item_name, category
     FROM superstore
@@ -55,7 +55,7 @@
 | 24.99  | Cozy Throw Blanket           | Furnishings      |
 
 ---
-**Query #2**
+**Query #2** This query added together the prices of all items in each category.
 
     SELECT SUM (price), category
     FROM superstore
@@ -69,7 +69,7 @@
 | 234.43      | Kitchen Supplies |
 
 ---
-**Query #3**
+**Query #3** This query gave me the average price of all items in the Kitchen Supplies category
 
     SELECT AVG (price), category
     FROM superstore
@@ -81,7 +81,7 @@
 | 58.607500   | Kitchen Supplies |
 
 ---
-**Query #4**
+**Query #4** This query showed me how many Premium Coffee Makers are in stock.
 
     SELECT stock_quantity, item_name
     FROM superstore
